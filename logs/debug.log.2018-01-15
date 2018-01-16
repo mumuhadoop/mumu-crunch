@@ -1,0 +1,214 @@
+2018-01-15 17:05:47,991 INFO[org.apache.crunch.io.impl.FileTargetImpl:353] - Will write output files to new path: hdfs://192.168.11.25:9000/mumu/crunch/wordcount/output
+2018-01-15 17:05:48,269 WARN[org.apache.hadoop.fs.FileUtil:190] - Failed to delete file or dir [E:\tmp\crunch-1142314199\p1\.MAP.crc]: it still exists.
+2018-01-15 17:05:48,271 WARN[org.apache.hadoop.fs.FileUtil:190] - Failed to delete file or dir [E:\tmp\crunch-1142314199\p1\MAP]: it still exists.
+2018-01-15 17:06:26,856 INFO[org.apache.crunch.io.impl.FileTargetImpl:353] - Will write output files to new path: hdfs://192.168.11.25:9000/mumu/crunch/wordcount/output
+2018-01-15 17:06:27,004 INFO[org.apache.crunch.hadoop.mapreduce.lib.jobcontrol.CrunchControlledJob:347] - Error occurred starting job "com.lovecws.mumu.crunch.basic.WordCount: Text(hdfs://192.168.11.25:9000/mumu/crunch/wordcount/inpu... ID=1 (1/1)":
+2018-01-15 17:06:27,006 INFO[org.apache.crunch.hadoop.mapreduce.lib.jobcontrol.CrunchControlledJob:348] - java.io.IOException: Cannot initialize Cluster. Please check your configuration for mapreduce.framework.name and the correspond server addresses.
+	at org.apache.hadoop.mapreduce.Cluster.initialize(Cluster.java:143)
+	at org.apache.hadoop.mapreduce.Cluster.<init>(Cluster.java:108)
+	at org.apache.hadoop.mapreduce.Cluster.<init>(Cluster.java:101)
+	at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1311)
+	at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1307)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1807)
+	at org.apache.hadoop.mapreduce.Job.connect(Job.java:1307)
+	at org.apache.hadoop.mapreduce.Job.submit(Job.java:1335)
+	at org.apache.crunch.hadoop.mapreduce.lib.jobcontrol.CrunchControlledJob.submit(CrunchControlledJob.java:340)
+	at org.apache.crunch.hadoop.mapreduce.lib.jobcontrol.CrunchJobControl.startReadyJobs(CrunchJobControl.java:285)
+	at org.apache.crunch.hadoop.mapreduce.lib.jobcontrol.CrunchJobControl.pollJobStatusAndStartNewOnes(CrunchJobControl.java:324)
+	at org.apache.crunch.impl.mr.exec.MRExecutor.monitorLoop(MRExecutor.java:131)
+	at org.apache.crunch.impl.mr.exec.MRExecutor.access$000(MRExecutor.java:58)
+	at org.apache.crunch.impl.mr.exec.MRExecutor$1.run(MRExecutor.java:90)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-01-15 17:08:00,481 INFO[org.apache.crunch.io.impl.FileTargetImpl:353] - Will write output files to new path: hdfs://192.168.11.25:9000/mumu/crunch/wordcount/output
+2018-01-15 17:08:00,659 INFO[org.apache.hadoop.conf.Configuration.deprecation:1181] - session.id is deprecated. Instead, use dfs.metrics.session-id
+2018-01-15 17:08:00,660 INFO[org.apache.hadoop.metrics.jvm.JvmMetrics:79] - Initializing JVM Metrics with processName=JobTracker, sessionId=
+2018-01-15 17:08:01,024 WARN[org.apache.hadoop.mapreduce.JobResourceUploader:171] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2018-01-15 17:08:01,931 INFO[org.apache.hadoop.mapreduce.lib.input.FileInputFormat:289] - Total input files to process : 1
+2018-01-15 17:08:01,956 INFO[org.apache.hadoop.mapreduce.lib.input.CombineFileInputFormat:427] - DEBUG: Terminated node allocation with : CompletedNodes: 1, size left: 86669
+2018-01-15 17:08:01,978 INFO[org.apache.hadoop.mapreduce.JobSubmitter:200] - number of splits:1
+2018-01-15 17:08:02,079 INFO[org.apache.hadoop.mapreduce.JobSubmitter:289] - Submitting tokens for job: job_local1752224994_0001
+2018-01-15 17:08:02,725 INFO[org.apache.hadoop.mapred.LocalDistributedCacheManager:201] - Creating symlink: \tmp\hadoop-Administrator\mapred\local\1516007282215\REDUCE <- E:\EclipseWorkspace\mumu-crunch/REDUCE
+2018-01-15 17:08:02,861 WARN[org.apache.hadoop.fs.FileUtil:810] - Command 'D:\Program Files\hadoop-2.7.4\bin\winutils.exe symlink E:\EclipseWorkspace\mumu-crunch\REDUCE \tmp\hadoop-Administrator\mapred\local\1516007282215\REDUCE' failed 1 with: CreateSymbolicLink error (1314): ???????????
+
+
+
+2018-01-15 17:08:02,861 WARN[org.apache.hadoop.mapred.LocalDistributedCacheManager:203] - Failed to create symlink: \tmp\hadoop-Administrator\mapred\local\1516007282215\REDUCE <- E:\EclipseWorkspace\mumu-crunch/REDUCE
+2018-01-15 17:08:02,861 INFO[org.apache.hadoop.mapred.LocalDistributedCacheManager:165] - Localized file:/tmp/crunch-666114466/p1/REDUCE as file:/tmp/hadoop-Administrator/mapred/local/1516007282215/REDUCE
+2018-01-15 17:08:02,870 INFO[org.apache.hadoop.mapred.LocalDistributedCacheManager:201] - Creating symlink: \tmp\hadoop-Administrator\mapred\local\1516007282216\COMBINE <- E:\EclipseWorkspace\mumu-crunch/COMBINE
+2018-01-15 17:08:02,931 WARN[org.apache.hadoop.fs.FileUtil:810] - Command 'D:\Program Files\hadoop-2.7.4\bin\winutils.exe symlink E:\EclipseWorkspace\mumu-crunch\COMBINE \tmp\hadoop-Administrator\mapred\local\1516007282216\COMBINE' failed 1 with: CreateSymbolicLink error (1314): ???????????
+
+
+
+2018-01-15 17:08:02,931 WARN[org.apache.hadoop.mapred.LocalDistributedCacheManager:203] - Failed to create symlink: \tmp\hadoop-Administrator\mapred\local\1516007282216\COMBINE <- E:\EclipseWorkspace\mumu-crunch/COMBINE
+2018-01-15 17:08:02,931 INFO[org.apache.hadoop.mapred.LocalDistributedCacheManager:165] - Localized file:/tmp/crunch-666114466/p1/COMBINE as file:/tmp/hadoop-Administrator/mapred/local/1516007282216/COMBINE
+2018-01-15 17:08:02,933 INFO[org.apache.hadoop.mapred.LocalDistributedCacheManager:201] - Creating symlink: \tmp\hadoop-Administrator\mapred\local\1516007282217\MAP <- E:\EclipseWorkspace\mumu-crunch/MAP
+2018-01-15 17:08:02,995 WARN[org.apache.hadoop.fs.FileUtil:810] - Command 'D:\Program Files\hadoop-2.7.4\bin\winutils.exe symlink E:\EclipseWorkspace\mumu-crunch\MAP \tmp\hadoop-Administrator\mapred\local\1516007282217\MAP' failed 1 with: CreateSymbolicLink error (1314): ???????????
+
+
+
+2018-01-15 17:08:02,995 WARN[org.apache.hadoop.mapred.LocalDistributedCacheManager:203] - Failed to create symlink: \tmp\hadoop-Administrator\mapred\local\1516007282217\MAP <- E:\EclipseWorkspace\mumu-crunch/MAP
+2018-01-15 17:08:02,995 INFO[org.apache.hadoop.mapred.LocalDistributedCacheManager:165] - Localized file:/tmp/crunch-666114466/p1/MAP as file:/tmp/hadoop-Administrator/mapred/local/1516007282217/MAP
+2018-01-15 17:08:03,041 INFO[org.apache.hadoop.mapreduce.Job:1345] - The url to track the job: http://localhost:8080/
+2018-01-15 17:08:03,041 INFO[org.apache.crunch.hadoop.mapreduce.lib.jobcontrol.CrunchControlledJob:342] - Running job "com.lovecws.mumu.crunch.basic.WordCount: Text(hdfs://192.168.11.25:9000/mumu/crunch/wordcount/inpu... ID=1 (1/1)"
+2018-01-15 17:08:03,041 INFO[org.apache.crunch.hadoop.mapreduce.lib.jobcontrol.CrunchControlledJob:343] - Job status available at: http://localhost:8080/
+2018-01-15 17:08:03,048 INFO[org.apache.hadoop.mapred.LocalJobRunner:498] - OutputCommitter set in config null
+2018-01-15 17:08:03,058 INFO[org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter:123] - File Output Committer Algorithm version is 1
+2018-01-15 17:08:03,058 INFO[org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter:138] - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2018-01-15 17:08:03,059 INFO[org.apache.hadoop.mapred.LocalJobRunner:516] - OutputCommitter is org.apache.crunch.io.CrunchOutputs$CompositeOutputCommitter
+2018-01-15 17:08:03,106 INFO[org.apache.hadoop.mapred.LocalJobRunner:475] - Waiting for map tasks
+2018-01-15 17:08:03,109 INFO[org.apache.hadoop.mapred.LocalJobRunner:251] - Starting task: attempt_local1752224994_0001_m_000000_0
+2018-01-15 17:08:03,148 INFO[org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter:123] - File Output Committer Algorithm version is 1
+2018-01-15 17:08:03,148 INFO[org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter:138] - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2018-01-15 17:08:03,165 INFO[org.apache.hadoop.yarn.util.ProcfsBasedProcessTree:168] - ProcfsBasedProcessTree currently is supported only on Linux.
+2018-01-15 17:08:03,268 INFO[org.apache.hadoop.mapred.Task:619] -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@5c626f7d
+2018-01-15 17:08:03,273 INFO[org.apache.hadoop.mapred.MapTask:756] - Processing split: CrunchInputSplit(Paths:/mumu/crunch/wordcount/input/debug.log:0+86669)
+2018-01-15 17:08:03,338 INFO[org.apache.hadoop.mapred.MapTask:1205] - (EQUATOR) 0 kvi 26214396(104857584)
+2018-01-15 17:08:03,338 INFO[org.apache.hadoop.mapred.MapTask:998] - mapreduce.task.io.sort.mb: 100
+2018-01-15 17:08:03,338 INFO[org.apache.hadoop.mapred.MapTask:999] - soft limit at 83886080
+2018-01-15 17:08:03,338 INFO[org.apache.hadoop.mapred.MapTask:1000] - bufstart = 0; bufvoid = 104857600
+2018-01-15 17:08:03,338 INFO[org.apache.hadoop.mapred.MapTask:1001] - kvstart = 26214396; length = 6553600
+2018-01-15 17:08:03,345 INFO[org.apache.hadoop.mapred.MapTask:403] - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2018-01-15 17:08:03,557 INFO[org.apache.hadoop.mapred.LocalJobRunner:618] - 
+2018-01-15 17:08:03,557 INFO[org.apache.hadoop.mapred.MapTask:1462] - Starting flush of map output
+2018-01-15 17:08:03,557 INFO[org.apache.hadoop.mapred.MapTask:1484] - Spilling map output
+2018-01-15 17:08:03,557 INFO[org.apache.hadoop.mapred.MapTask:1485] - bufstart = 0; bufend = 99141; bufvoid = 104857600
+2018-01-15 17:08:03,557 INFO[org.apache.hadoop.mapred.MapTask:1487] - kvstart = 26214396(104857584); kvend = 26208264(104833056); length = 6133/6553600
+2018-01-15 17:08:03,599 INFO[org.apache.hadoop.mapred.MapTask:1669] - Finished spill 0
+2018-01-15 17:08:03,606 INFO[org.apache.hadoop.mapred.Task:1099] - Task:attempt_local1752224994_0001_m_000000_0 is done. And is in the process of committing
+2018-01-15 17:08:03,616 INFO[org.apache.hadoop.mapred.LocalJobRunner:618] - map
+2018-01-15 17:08:03,616 INFO[org.apache.hadoop.mapred.Task:1219] - Task 'attempt_local1752224994_0001_m_000000_0' done.
+2018-01-15 17:08:03,616 INFO[org.apache.hadoop.mapred.LocalJobRunner:276] - Finishing task: attempt_local1752224994_0001_m_000000_0
+2018-01-15 17:08:03,617 INFO[org.apache.hadoop.mapred.LocalJobRunner:483] - map task executor complete.
+2018-01-15 17:08:03,620 INFO[org.apache.hadoop.mapred.LocalJobRunner:475] - Waiting for reduce tasks
+2018-01-15 17:08:03,621 INFO[org.apache.hadoop.mapred.LocalJobRunner:329] - Starting task: attempt_local1752224994_0001_r_000000_0
+2018-01-15 17:08:03,629 INFO[org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter:123] - File Output Committer Algorithm version is 1
+2018-01-15 17:08:03,629 INFO[org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter:138] - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2018-01-15 17:08:03,631 INFO[org.apache.hadoop.yarn.util.ProcfsBasedProcessTree:168] - ProcfsBasedProcessTree currently is supported only on Linux.
+2018-01-15 17:08:03,688 INFO[org.apache.hadoop.mapred.Task:619] -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@443c70bc
+2018-01-15 17:08:03,693 INFO[org.apache.hadoop.mapred.ReduceTask:362] - Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@6d72dcab
+2018-01-15 17:08:03,710 INFO[org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl:206] - MergerManager: memoryLimit=993106304, maxSingleShuffleLimit=248276576, mergeThreshold=655450176, ioSortFactor=10, memToMemMergeOutputsThreshold=10
+2018-01-15 17:08:03,712 INFO[org.apache.hadoop.mapreduce.task.reduce.EventFetcher:61] - attempt_local1752224994_0001_r_000000_0 Thread started: EventFetcher for fetching Map Completion Events
+2018-01-15 17:08:03,748 INFO[org.apache.hadoop.mapreduce.task.reduce.LocalFetcher:145] - localfetcher#1 about to shuffle output of map attempt_local1752224994_0001_m_000000_0 decomp: 46511 len: 46515 to MEMORY
+2018-01-15 17:08:03,753 INFO[org.apache.hadoop.mapreduce.task.reduce.InMemoryMapOutput:93] - Read 46511 bytes from map-output for attempt_local1752224994_0001_m_000000_0
+2018-01-15 17:08:03,754 INFO[org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl:321] - closeInMemoryFile -> map-output of size: 46511, inMemoryMapOutputs.size() -> 1, commitMemory -> 0, usedMemory ->46511
+2018-01-15 17:08:03,758 INFO[org.apache.hadoop.mapreduce.task.reduce.EventFetcher:76] - EventFetcher is interrupted.. Returning
+2018-01-15 17:08:03,759 INFO[org.apache.hadoop.mapred.LocalJobRunner:618] - 1 / 1 copied.
+2018-01-15 17:08:03,759 INFO[org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl:693] - finalMerge called with 1 in-memory map-outputs and 0 on-disk map-outputs
+2018-01-15 17:08:03,771 INFO[org.apache.hadoop.mapred.Merger:606] - Merging 1 sorted segments
+2018-01-15 17:08:03,771 INFO[org.apache.hadoop.mapred.Merger:705] - Down to the last merge-pass, with 1 segments left of total size: 46507 bytes
+2018-01-15 17:08:03,784 INFO[org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl:760] - Merged 1 segments, 46511 bytes to disk to satisfy reduce memory limit
+2018-01-15 17:08:03,785 INFO[org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl:790] - Merging 1 files, 46515 bytes from disk
+2018-01-15 17:08:03,786 INFO[org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl:805] - Merging 0 segments, 0 bytes from memory into reduce
+2018-01-15 17:08:03,787 INFO[org.apache.hadoop.mapred.Merger:606] - Merging 1 sorted segments
+2018-01-15 17:08:03,788 INFO[org.apache.hadoop.mapred.Merger:705] - Down to the last merge-pass, with 1 segments left of total size: 46507 bytes
+2018-01-15 17:08:03,789 INFO[org.apache.hadoop.mapred.LocalJobRunner:618] - 1 / 1 copied.
+2018-01-15 17:08:03,790 INFO[org.apache.hadoop.conf.Configuration.deprecation:1181] - mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords
+2018-01-15 17:08:03,810 INFO[org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter:123] - File Output Committer Algorithm version is 1
+2018-01-15 17:08:03,810 INFO[org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter:138] - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2018-01-15 17:08:03,843 INFO[org.apache.hadoop.mapred.Task:1099] - Task:attempt_local1752224994_0001_r_000000_0 is done. And is in the process of committing
+2018-01-15 17:08:03,847 INFO[org.apache.hadoop.mapred.LocalJobRunner:618] - 1 / 1 copied.
+2018-01-15 17:08:03,847 INFO[org.apache.hadoop.mapred.Task:1260] - Task attempt_local1752224994_0001_r_000000_0 is allowed to commit now
+2018-01-15 17:08:03,854 INFO[org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter:582] - Saved output of task 'attempt_local1752224994_out0_0001_r_000000_0' to file:/tmp/crunch-666114466/p1/output/_temporary/0/task_local1752224994_out0_0001_r_000000
+2018-01-15 17:08:03,855 INFO[org.apache.hadoop.mapred.LocalJobRunner:618] - reduce > reduce
+2018-01-15 17:08:03,856 INFO[org.apache.hadoop.mapred.Task:1219] - Task 'attempt_local1752224994_0001_r_000000_0' done.
+2018-01-15 17:08:03,856 INFO[org.apache.hadoop.mapred.LocalJobRunner:352] - Finishing task: attempt_local1752224994_0001_r_000000_0
+2018-01-15 17:08:03,857 INFO[org.apache.hadoop.mapred.LocalJobRunner:483] - reduce task executor complete.
+2018-01-15 17:23:14,525 ERROR[org.apache.crunch.io.impl.FileTargetImpl:319] - Path hdfs://192.168.11.25:9000/mumu/crunch/wordcount/output already exists!
+2018-01-15 17:24:04,865 ERROR[org.apache.crunch.io.impl.FileTargetImpl:319] - Path hdfs://192.168.11.25:9000/mumu/crunch/wordcount/output already exists!
+2018-01-15 17:35:41,708 INFO[org.apache.crunch.io.impl.FileTargetImpl:353] - Will write output files to new path: hdfs://192.168.11.25:9000/mumu/crunch/wordcount/outputseq
+2018-01-15 17:35:41,851 INFO[org.apache.hadoop.conf.Configuration.deprecation:1181] - session.id is deprecated. Instead, use dfs.metrics.session-id
+2018-01-15 17:35:41,852 INFO[org.apache.hadoop.metrics.jvm.JvmMetrics:79] - Initializing JVM Metrics with processName=JobTracker, sessionId=
+2018-01-15 17:35:42,073 WARN[org.apache.hadoop.mapreduce.JobResourceUploader:171] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2018-01-15 17:35:42,414 INFO[org.apache.hadoop.mapreduce.lib.input.FileInputFormat:289] - Total input files to process : 1
+2018-01-15 17:35:42,449 INFO[org.apache.hadoop.mapreduce.lib.input.CombineFileInputFormat:427] - DEBUG: Terminated node allocation with : CompletedNodes: 1, size left: 86669
+2018-01-15 17:35:42,477 INFO[org.apache.hadoop.mapreduce.JobSubmitter:200] - number of splits:1
+2018-01-15 17:35:42,572 INFO[org.apache.hadoop.mapreduce.JobSubmitter:289] - Submitting tokens for job: job_local1913259061_0001
+2018-01-15 17:35:43,313 INFO[org.apache.hadoop.mapred.LocalDistributedCacheManager:201] - Creating symlink: \tmp\hadoop-Administrator\mapred\local\1516008942684\REDUCE <- E:\EclipseWorkspace\mumu-crunch/REDUCE
+2018-01-15 17:35:43,444 WARN[org.apache.hadoop.fs.FileUtil:810] - Command 'D:\Program Files\hadoop-2.7.4\bin\winutils.exe symlink E:\EclipseWorkspace\mumu-crunch\REDUCE \tmp\hadoop-Administrator\mapred\local\1516008942684\REDUCE' failed 1 with: CreateSymbolicLink error (1314): ???????????
+
+
+
+2018-01-15 17:35:43,444 WARN[org.apache.hadoop.mapred.LocalDistributedCacheManager:203] - Failed to create symlink: \tmp\hadoop-Administrator\mapred\local\1516008942684\REDUCE <- E:\EclipseWorkspace\mumu-crunch/REDUCE
+2018-01-15 17:35:43,445 INFO[org.apache.hadoop.mapred.LocalDistributedCacheManager:165] - Localized file:/tmp/crunch-941182166/p1/REDUCE as file:/tmp/hadoop-Administrator/mapred/local/1516008942684/REDUCE
+2018-01-15 17:35:43,453 INFO[org.apache.hadoop.mapred.LocalDistributedCacheManager:201] - Creating symlink: \tmp\hadoop-Administrator\mapred\local\1516008942685\COMBINE <- E:\EclipseWorkspace\mumu-crunch/COMBINE
+2018-01-15 17:35:43,511 WARN[org.apache.hadoop.fs.FileUtil:810] - Command 'D:\Program Files\hadoop-2.7.4\bin\winutils.exe symlink E:\EclipseWorkspace\mumu-crunch\COMBINE \tmp\hadoop-Administrator\mapred\local\1516008942685\COMBINE' failed 1 with: CreateSymbolicLink error (1314): ???????????
+
+
+
+2018-01-15 17:35:43,511 WARN[org.apache.hadoop.mapred.LocalDistributedCacheManager:203] - Failed to create symlink: \tmp\hadoop-Administrator\mapred\local\1516008942685\COMBINE <- E:\EclipseWorkspace\mumu-crunch/COMBINE
+2018-01-15 17:35:43,512 INFO[org.apache.hadoop.mapred.LocalDistributedCacheManager:165] - Localized file:/tmp/crunch-941182166/p1/COMBINE as file:/tmp/hadoop-Administrator/mapred/local/1516008942685/COMBINE
+2018-01-15 17:35:43,513 INFO[org.apache.hadoop.mapred.LocalDistributedCacheManager:201] - Creating symlink: \tmp\hadoop-Administrator\mapred\local\1516008942686\MAP <- E:\EclipseWorkspace\mumu-crunch/MAP
+2018-01-15 17:35:43,581 WARN[org.apache.hadoop.fs.FileUtil:810] - Command 'D:\Program Files\hadoop-2.7.4\bin\winutils.exe symlink E:\EclipseWorkspace\mumu-crunch\MAP \tmp\hadoop-Administrator\mapred\local\1516008942686\MAP' failed 1 with: CreateSymbolicLink error (1314): ???????????
+
+
+
+2018-01-15 17:35:43,581 WARN[org.apache.hadoop.mapred.LocalDistributedCacheManager:203] - Failed to create symlink: \tmp\hadoop-Administrator\mapred\local\1516008942686\MAP <- E:\EclipseWorkspace\mumu-crunch/MAP
+2018-01-15 17:35:43,582 INFO[org.apache.hadoop.mapred.LocalDistributedCacheManager:165] - Localized file:/tmp/crunch-941182166/p1/MAP as file:/tmp/hadoop-Administrator/mapred/local/1516008942686/MAP
+2018-01-15 17:35:43,636 INFO[org.apache.hadoop.mapreduce.Job:1345] - The url to track the job: http://localhost:8080/
+2018-01-15 17:35:43,636 INFO[org.apache.crunch.hadoop.mapreduce.lib.jobcontrol.CrunchControlledJob:342] - Running job "com.lovecws.mumu.crunch.basic.WordCount: Text(hdfs://192.168.11.25:9000/mumu/crunch/wordcount/inpu... ID=1 (1/1)"
+2018-01-15 17:35:43,637 INFO[org.apache.crunch.hadoop.mapreduce.lib.jobcontrol.CrunchControlledJob:343] - Job status available at: http://localhost:8080/
+2018-01-15 17:35:43,638 INFO[org.apache.hadoop.mapred.LocalJobRunner:498] - OutputCommitter set in config null
+2018-01-15 17:35:43,646 INFO[org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter:123] - File Output Committer Algorithm version is 1
+2018-01-15 17:35:43,646 INFO[org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter:138] - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2018-01-15 17:35:43,647 INFO[org.apache.hadoop.mapred.LocalJobRunner:516] - OutputCommitter is org.apache.crunch.io.CrunchOutputs$CompositeOutputCommitter
+2018-01-15 17:35:43,687 INFO[org.apache.hadoop.mapred.LocalJobRunner:475] - Waiting for map tasks
+2018-01-15 17:35:43,687 INFO[org.apache.hadoop.mapred.LocalJobRunner:251] - Starting task: attempt_local1913259061_0001_m_000000_0
+2018-01-15 17:35:43,711 INFO[org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter:123] - File Output Committer Algorithm version is 1
+2018-01-15 17:35:43,711 INFO[org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter:138] - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2018-01-15 17:35:43,733 INFO[org.apache.hadoop.yarn.util.ProcfsBasedProcessTree:168] - ProcfsBasedProcessTree currently is supported only on Linux.
+2018-01-15 17:35:43,815 INFO[org.apache.hadoop.mapred.Task:619] -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@7cb2234b
+2018-01-15 17:35:43,819 INFO[org.apache.hadoop.mapred.MapTask:756] - Processing split: CrunchInputSplit(Paths:/mumu/crunch/wordcount/input/debug.log:0+86669)
+2018-01-15 17:35:43,875 INFO[org.apache.hadoop.mapred.MapTask:1205] - (EQUATOR) 0 kvi 26214396(104857584)
+2018-01-15 17:35:43,875 INFO[org.apache.hadoop.mapred.MapTask:998] - mapreduce.task.io.sort.mb: 100
+2018-01-15 17:35:43,875 INFO[org.apache.hadoop.mapred.MapTask:999] - soft limit at 83886080
+2018-01-15 17:35:43,875 INFO[org.apache.hadoop.mapred.MapTask:1000] - bufstart = 0; bufvoid = 104857600
+2018-01-15 17:35:43,875 INFO[org.apache.hadoop.mapred.MapTask:1001] - kvstart = 26214396; length = 6553600
+2018-01-15 17:35:43,880 INFO[org.apache.hadoop.mapred.MapTask:403] - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2018-01-15 17:35:44,065 INFO[org.apache.hadoop.mapred.LocalJobRunner:618] - 
+2018-01-15 17:35:44,065 INFO[org.apache.hadoop.mapred.MapTask:1462] - Starting flush of map output
+2018-01-15 17:35:44,066 INFO[org.apache.hadoop.mapred.MapTask:1484] - Spilling map output
+2018-01-15 17:35:44,066 INFO[org.apache.hadoop.mapred.MapTask:1485] - bufstart = 0; bufend = 99141; bufvoid = 104857600
+2018-01-15 17:35:44,066 INFO[org.apache.hadoop.mapred.MapTask:1487] - kvstart = 26214396(104857584); kvend = 26208264(104833056); length = 6133/6553600
+2018-01-15 17:35:44,113 INFO[org.apache.hadoop.mapred.MapTask:1669] - Finished spill 0
+2018-01-15 17:35:44,120 INFO[org.apache.hadoop.mapred.Task:1099] - Task:attempt_local1913259061_0001_m_000000_0 is done. And is in the process of committing
+2018-01-15 17:35:44,133 INFO[org.apache.hadoop.mapred.LocalJobRunner:618] - map
+2018-01-15 17:35:44,133 INFO[org.apache.hadoop.mapred.Task:1219] - Task 'attempt_local1913259061_0001_m_000000_0' done.
+2018-01-15 17:35:44,133 INFO[org.apache.hadoop.mapred.LocalJobRunner:276] - Finishing task: attempt_local1913259061_0001_m_000000_0
+2018-01-15 17:35:44,133 INFO[org.apache.hadoop.mapred.LocalJobRunner:483] - map task executor complete.
+2018-01-15 17:35:44,136 INFO[org.apache.hadoop.mapred.LocalJobRunner:475] - Waiting for reduce tasks
+2018-01-15 17:35:44,136 INFO[org.apache.hadoop.mapred.LocalJobRunner:329] - Starting task: attempt_local1913259061_0001_r_000000_0
+2018-01-15 17:35:44,147 INFO[org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter:123] - File Output Committer Algorithm version is 1
+2018-01-15 17:35:44,147 INFO[org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter:138] - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2018-01-15 17:35:44,149 INFO[org.apache.hadoop.yarn.util.ProcfsBasedProcessTree:168] - ProcfsBasedProcessTree currently is supported only on Linux.
+2018-01-15 17:35:44,214 INFO[org.apache.hadoop.mapred.Task:619] -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@63e923f0
+2018-01-15 17:35:44,217 INFO[org.apache.hadoop.mapred.ReduceTask:362] - Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@3119766d
+2018-01-15 17:35:44,230 INFO[org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl:206] - MergerManager: memoryLimit=993106304, maxSingleShuffleLimit=248276576, mergeThreshold=655450176, ioSortFactor=10, memToMemMergeOutputsThreshold=10
+2018-01-15 17:35:44,232 INFO[org.apache.hadoop.mapreduce.task.reduce.EventFetcher:61] - attempt_local1913259061_0001_r_000000_0 Thread started: EventFetcher for fetching Map Completion Events
+2018-01-15 17:35:44,263 INFO[org.apache.hadoop.mapreduce.task.reduce.LocalFetcher:145] - localfetcher#1 about to shuffle output of map attempt_local1913259061_0001_m_000000_0 decomp: 46511 len: 46515 to MEMORY
+2018-01-15 17:35:44,267 INFO[org.apache.hadoop.mapreduce.task.reduce.InMemoryMapOutput:93] - Read 46511 bytes from map-output for attempt_local1913259061_0001_m_000000_0
+2018-01-15 17:35:44,269 INFO[org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl:321] - closeInMemoryFile -> map-output of size: 46511, inMemoryMapOutputs.size() -> 1, commitMemory -> 0, usedMemory ->46511
+2018-01-15 17:35:44,271 INFO[org.apache.hadoop.mapreduce.task.reduce.EventFetcher:76] - EventFetcher is interrupted.. Returning
+2018-01-15 17:35:44,273 INFO[org.apache.hadoop.mapred.LocalJobRunner:618] - 1 / 1 copied.
+2018-01-15 17:35:44,273 INFO[org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl:693] - finalMerge called with 1 in-memory map-outputs and 0 on-disk map-outputs
+2018-01-15 17:35:44,285 INFO[org.apache.hadoop.mapred.Merger:606] - Merging 1 sorted segments
+2018-01-15 17:35:44,285 INFO[org.apache.hadoop.mapred.Merger:705] - Down to the last merge-pass, with 1 segments left of total size: 46507 bytes
+2018-01-15 17:35:44,295 INFO[org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl:760] - Merged 1 segments, 46511 bytes to disk to satisfy reduce memory limit
+2018-01-15 17:35:44,297 INFO[org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl:790] - Merging 1 files, 46515 bytes from disk
+2018-01-15 17:35:44,298 INFO[org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl:805] - Merging 0 segments, 0 bytes from memory into reduce
+2018-01-15 17:35:44,298 INFO[org.apache.hadoop.mapred.Merger:606] - Merging 1 sorted segments
+2018-01-15 17:35:44,302 INFO[org.apache.hadoop.mapred.Merger:705] - Down to the last merge-pass, with 1 segments left of total size: 46507 bytes
+2018-01-15 17:35:44,302 INFO[org.apache.hadoop.mapred.LocalJobRunner:618] - 1 / 1 copied.
+2018-01-15 17:35:44,304 INFO[org.apache.hadoop.conf.Configuration.deprecation:1181] - mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords
+2018-01-15 17:35:44,319 INFO[org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter:123] - File Output Committer Algorithm version is 1
+2018-01-15 17:35:44,319 INFO[org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter:138] - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2018-01-15 17:35:44,359 INFO[org.apache.hadoop.mapred.Task:1099] - Task:attempt_local1913259061_0001_r_000000_0 is done. And is in the process of committing
+2018-01-15 17:35:44,365 INFO[org.apache.hadoop.mapred.LocalJobRunner:618] - 1 / 1 copied.
+2018-01-15 17:35:44,365 INFO[org.apache.hadoop.mapred.Task:1260] - Task attempt_local1913259061_0001_r_000000_0 is allowed to commit now
+2018-01-15 17:35:44,372 INFO[org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter:582] - Saved output of task 'attempt_local1913259061_out0_0001_r_000000_0' to file:/tmp/crunch-941182166/p1/output/_temporary/0/task_local1913259061_out0_0001_r_000000
+2018-01-15 17:35:44,373 INFO[org.apache.hadoop.mapred.LocalJobRunner:618] - reduce > reduce
+2018-01-15 17:35:44,373 INFO[org.apache.hadoop.mapred.Task:1219] - Task 'attempt_local1913259061_0001_r_000000_0' done.
+2018-01-15 17:35:44,374 INFO[org.apache.hadoop.mapred.LocalJobRunner:352] - Finishing task: attempt_local1913259061_0001_r_000000_0
+2018-01-15 17:35:44,374 INFO[org.apache.hadoop.mapred.LocalJobRunner:483] - reduce task executor complete.
